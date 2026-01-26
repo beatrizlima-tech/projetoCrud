@@ -9,8 +9,8 @@ public class Main {
 		// Criando um objeto da classe de controle
 		var produtoController = new ProdutoController();
 		
-		// Executar o cadastro do produto
-		produtoController.cadastrarProduto();
+		// Executar o gerenciar do produto
+		produtoController.gerenciarProdutos();
 		
 
 	}
