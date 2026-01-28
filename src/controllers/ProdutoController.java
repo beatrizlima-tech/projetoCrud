@@ -3,7 +3,7 @@ package controllers;
 import java.util.Scanner;
 
 import entities.Produto;
-import respositories.ProdutoRepository;
+import repositories.ProdutoRepository;
 
 /*
  * Classe para fazer as capturas dados
