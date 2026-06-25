@@ -1,49 +1,90 @@
 # 📦 Projeto CRUD de Produtos
 
-Aplicação desenvolvida em Java para gerenciamento de produtos, utilizando JDBC para conexão com banco de dados PostgreSQL.
+![Java](https://img.shields.io/badge/Java-21-red?style=for-the-badge\&logo=openjdk)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-blue?style=for-the-badge\&logo=postgresql)
+![JDBC](https://img.shields.io/badge/JDBC-Database%20Connectivity-orange?style=for-the-badge)
+![Build](https://img.shields.io/badge/build-passing-brightgreen?style=for-the-badge)
+![License](https://img.shields.io/badge/license-MIT-lightgrey?style=for-the-badge)
 
-O projeto implementa as principais operações de um CRUD: cadastro, consulta, atualização e exclusão de produtos.
+---
 
-## 🚀 Tecnologias Utilizadas
+# 📌 Sobre o projeto
+
+O **Projeto CRUD de Produtos** é uma aplicação desenvolvida em **Java** para gerenciamento de produtos, utilizando **JDBC** para comunicação com banco de dados **PostgreSQL**.
+
+O projeto foi desenvolvido com foco na prática de operações CRUD (Create, Read, Update e Delete), integração com banco de dados relacionais e organização em camadas, aplicando conceitos fundamentais do desenvolvimento backend.
+
+---
+
+# 🚀 Funcionalidades
+
+* Cadastro de produtos
+* Consulta de produtos cadastrados
+* Atualização de produtos
+* Exclusão de produtos
+* Persistência em banco PostgreSQL
+* Execução de comandos SQL com JDBC
+
+---
+
+# 🧱 Tecnologias Utilizadas
 
 * Java
 * JDBC
 * PostgreSQL
 * SQL
-* Programação Orientada a Objetos
+* Programação Orientada a Objetos (POO)
 
-## ✨ Funcionalidades
+---
 
-* Cadastro de produtos
-* Atualização de produtos
-* Exclusão de produtos
-* Consulta de produtos cadastrados
-* Integração com banco de dados PostgreSQL
-* Execução de comandos SQL via JDBC
-
-## 🏗️ Estrutura do Projeto
+# 🏗️ Estrutura do Projeto
 
 ```text
 src/
+
 ├── controllers
 ├── entities
 ├── factories
 └── repositories
 ```
 
-## 🧠 Conceitos Aplicados
+---
+
+# 📊 Arquitetura
+
+```text
+Usuário
+      │
+      ▼
+Controller
+      │
+      ▼
+Repository
+      │
+      ▼
+JDBC
+      │
+      ▼
+PostgreSQL
+```
+
+---
+
+# 🧠 Conceitos Aplicados
 
 * Programação Orientada a Objetos
 * Encapsulamento
-* Separação de responsabilidades
-* Conexão com banco de dados
-* CRUD com SQL
+* Arquitetura em Camadas
+* CRUD
+* JDBC
+* SQL
 * PreparedStatement
 * Tratamento de exceções
+* Separação de responsabilidades
 
-## 🗄️ Banco de Dados
+---
 
-O projeto utiliza PostgreSQL.
+# 🗄️ Banco de Dados
 
 Crie o banco de dados:
 
@@ -51,29 +92,43 @@ Crie o banco de dados:
 CREATE DATABASE bdaula03;
 ```
 
-Crie a tabela:
+Em seguida, execute o script da tabela:
 
 ```sql
 CREATE TABLE produtos(
     id SERIAL PRIMARY KEY,
     nome VARCHAR(100) NOT NULL,
-    preco NUMERIC(10, 2) NOT NULL,
+    preco NUMERIC(10,2) NOT NULL,
     quantidade INTEGER NOT NULL,
     data_criacao TIMESTAMP NOT NULL DEFAULT NOW()
 );
 ```
 
-## ▶️ Como Executar
+---
 
-1. Clone o repositório:
+# ⚙️ Como Executar
+
+## 1. Clonar o repositório
 
 ```bash
 git clone https://github.com/beatrizlima-tech/projetoCrud.git
 ```
 
-2. Abra o projeto em uma IDE Java.
+---
 
-3. Configure o banco de dados PostgreSQL na classe `ConnectionFactory`:
+## 2. Abrir o projeto
+
+Abra o projeto em uma IDE Java, como:
+
+* IntelliJ IDEA
+* Eclipse
+* Visual Studio Code
+
+---
+
+## 3. Configurar o banco
+
+Edite a classe **ConnectionFactory** com suas credenciais:
 
 ```java
 var host = "jdbc:postgresql://localhost:5432/bdaula03";
@@ -81,9 +136,11 @@ var user = "postgres";
 var pass = "sua_senha";
 ```
 
-4. Execute a classe principal do projeto.
+---
 
-5. Escolha uma das opções no menu:
+## 4. Executar a aplicação
+
+Execute a classe principal e escolha uma das opções disponíveis:
 
 ```text
 1 - Cadastrar produto
@@ -92,13 +149,33 @@ var pass = "sua_senha";
 4 - Consultar produtos
 ```
 
-## 📚 Objetivo
+---
 
-Este projeto foi desenvolvido para praticar fundamentos de desenvolvimento backend com Java, integração com banco de dados PostgreSQL e execução de operações CRUD utilizando JDBC.
+# 📚 Objetivo
 
-## 👩‍💻 Autora
+Este projeto foi desenvolvido para consolidar conhecimentos em desenvolvimento backend utilizando Java, JDBC e PostgreSQL, praticando operações CRUD, integração com banco de dados relacionais e organização em camadas.
+
+---
+
+# 📌 Melhorias Futuras
+
+* Implementar validações de entrada
+* Adicionar exclusão lógica dos produtos
+* Criar interface gráfica
+* Implementar testes automatizados
+* Migrar JDBC para Spring Data JPA
+* Desenvolver API REST utilizando Spring Boot
+
+---
+
+# 👩‍💻 Autora
 
 **Beatriz Lima de Oliveira**
 
-GitHub:
+🔗 GitHub
+
 https://github.com/beatrizlima-tech
+
+💼 LinkedIn
+
+https://www.linkedin.com/in/beatrizlima-tech
